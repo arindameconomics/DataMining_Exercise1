@@ -3,6 +3,7 @@ title: "Exercise1"
 author: "Arindam Chatterjee (UT EID - AC83995)"
 date: "`r Sys.Date()`"
 output:
+  md_document: default
   pdf_document: default
   word_document: default
 ---

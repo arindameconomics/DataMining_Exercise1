@@ -10,13 +10,13 @@ does this change by airline?**
 
 ### Graph1:
 
-    ## Warning: Removed 1 row(s) containing missing values (geom_path).
+    ## Warning: Removed 1 row containing missing values (`geom_line()`).
 
 <img src="Exercises1_files/figure-markdown_strict/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
 
 ### Graph2:
 
-    ## Warning: Removed 1 row(s) containing missing values (geom_path).
+    ## Warning: Removed 1 row containing missing values (`geom_line()`).
 
 <img src="Exercises1_files/figure-markdown_strict/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
 
@@ -41,13 +41,13 @@ more clear during the day till midnight.
 
 ### Graph3:
 
-    ## Warning: Removed 1 row(s) containing missing values (geom_path).
+    ## Warning: Removed 1 row containing missing values (`geom_line()`).
 
 <img src="Exercises1_files/figure-markdown_strict/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
 
 ### Graph 4:
 
-    ## Warning: Removed 1 row(s) containing missing values (geom_path).
+    ## Warning: Removed 1 row containing missing values (`geom_line()`).
 
 <img src="Exercises1_files/figure-markdown_strict/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
@@ -372,105 +372,46 @@ minimization of K in 1-200 - 5. Plot the prediction of the optimal K
 
 #### Split the data into a training and a testing set with the probability 0.8
 
-<img src="./graphs/1.png" width="70%" height="70%" style="display: block; margin: auto;" />
+<img src="Exercises1_files/figure-markdown_strict/unnamed-chunk-20-1.png" style="display: block; margin: auto;" />
 
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">x</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">min_k=25</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">min_rmse=7950.602</td>
-</tr>
-</tbody>
-</table>
-
-From the above result, the optimal K is 25 because of the minimum RMSE
+From the above result, the optimal K is 18 because of the minimum RMSE
 on it. The prediction is in the following.
 
-<img src="./graphs/2.png" width="70%" height="70%" style="display: block; margin: auto;" />
+    ## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+    ## ℹ Please use `linewidth` instead.
+    ## This warning is displayed once every 8 hours.
+    ## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+    ## generated.
+
+<img src="Exercises1_files/figure-markdown_strict/unnamed-chunk-21-1.png" style="display: block; margin: auto;" />
 
 #### K-CV
 
-<img src="./graphs/3.png" width="70%" height="70%" style="display: block; margin: auto;" />
-
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">x</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">min_k=15</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">min_err=9845.729</td>
-</tr>
-</tbody>
-</table>
-
-From the above result, the optimal K is 15 because of the minimum RMSE
+<img src="Exercises1_files/figure-markdown_strict/unnamed-chunk-22-1.png" style="display: block; margin: auto;" />
+From the above result, the optimal K is 13 because of the minimum RMSE
 on it. The prediction is in the following.
 
-<img src="./graphs/4.png" width="70%" height="70%" style="display: block; margin: auto;" />
+<img src="Exercises1_files/figure-markdown_strict/unnamed-chunk-23-1.png" style="display: block; margin: auto;" />
 
 #### Trim: 65 AMG
 
 #### Split the data into a training and a testing set with the probability 0.8
 
-<img src="./graphs/5.png" width="70%" height="70%" style="display: block; margin: auto;" />
+<img src="Exercises1_files/figure-markdown_strict/unnamed-chunk-24-1.png" style="display: block; margin: auto;" />
 
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">x</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">min_k=17</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">rmse=10805.82</td>
-</tr>
-</tbody>
-</table>
-
-From the above result, the optimal K is 17 because of the minimum RMSE
+From the above result, the optimal K is 56 because of the minimum RMSE
 on it. The prediction is in the following.
 
-<img src="./graphs/6.png" width="70%" height="70%" style="display: block; margin: auto;" />
+<img src="Exercises1_files/figure-markdown_strict/unnamed-chunk-25-1.png" style="display: block; margin: auto;" />
 
 #### K-fold
 
-<img src="./graphs/7.png" width="70%" height="70%" style="display: block; margin: auto;" />
+<img src="Exercises1_files/figure-markdown_strict/unnamed-chunk-26-1.png" style="display: block; margin: auto;" />
 
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">x</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">min_k=13</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">min_err=20462.65</td>
-</tr>
-</tbody>
-</table>
-
-From the above result, the optimal K is 13 because of the minimum RMSE
+From the above result, the optimal K is 51 because of the minimum RMSE
 on it. The prediction is in the following.
 
-<img src="./graphs/8.png" width="70%" height="70%" style="display: block; margin: auto;" />
+<img src="Exercises1_files/figure-markdown_strict/unnamed-chunk-27-1.png" style="display: block; margin: auto;" />
 
 ### Which trim yields a larger optimal value of K? Why do you think this is?
 
@@ -486,4 +427,5 @@ because of the lower bias compared to large k values. At small sample
 size, the bias for large k value is high & the lower variance that comes
 with large k-values cannot offset the higher bias. So in the case of
 small sample size, compared to large k values, the low k value minimizes
-the rmse.
+the rmse. Note that when we used the K-fold method to the optimal value
+of k by each trim, the difference of them was smaller.
